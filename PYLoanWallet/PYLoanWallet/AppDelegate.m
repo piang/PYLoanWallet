@@ -8,8 +8,12 @@
 
 #import "AppDelegate.h"
 #import "AppDelegate+Launch.h"
+#import "PYServicesImpl.h"
+#import "PYSettingService.h"
 
 @interface AppDelegate ()
+
+@property(strong, nonatomic) id<PYServicesProtocol> service;
 
 @end
 
@@ -23,6 +27,8 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self loadRootViewController];
     [self.window makeKeyAndVisible];
+    [PYSettingService shared];
+    NSLog(@"piang ==> %ld",[PYSettingService shared].status);
     
     return YES;
 }
