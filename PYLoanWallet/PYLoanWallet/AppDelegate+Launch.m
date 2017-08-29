@@ -7,12 +7,12 @@
 //
 
 #import "AppDelegate+Launch.h"
-#import "PYViewController.h"
+#import "PYHomeViewController.h"
 
 @implementation AppDelegate (Launch)
 
 - (void)loadRootViewController {
-    [UIApplication sharedApplication].delegate.window.rootViewController = [[PYViewController alloc] init];
+    [UIApplication sharedApplication].delegate.window.rootViewController = [[PYHomeViewController alloc] init];
 }
 
 @end

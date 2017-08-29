@@ -30,16 +30,11 @@
         [AVOSCloud setApplicationId:@"XpuV4q5fN2hj9hGr4CwzYvHO-gzGzoHsz" clientKey:@"vOcE9YRm4PLFdxv3GYrnkTVb"];
         AVQuery *query = [AVQuery queryWithClassName:@"channel_switch"];
         
-        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-            [query getObjectInBackgroundWithId:@"587383a38d6d81006c3b531b" block:^(AVObject *object, NSError *error) {
-                NSLog(@"object%@",object);
-                if ([object[@"is_open"] boolValue]) {
-                    [[NSUserDefaults standardUserDefaults] setObject:@([object[@"is_open"] integerValue]) forKey:USERDEFAULT_APP_STATUS_SETTING];
-                }
-                
-            }];
-        });
         
+        AVObject *object = [query getObjectWithId:@"587383a38d6d81006c3b531b"];
+        if ([object[@"is_open"] boolValue]) {
+            [[NSUserDefaults standardUserDefaults] setObject:@([object[@"is_open"] integerValue]) forKey:USERDEFAULT_APP_STATUS_SETTING];
+        }
     });
     return instance;
 }
