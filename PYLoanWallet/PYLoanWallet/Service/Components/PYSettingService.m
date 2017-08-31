@@ -7,15 +7,22 @@
 //
 
 #import "PYSettingService.h"
-#import <AVOSCloud/AVOSCloud.h>
+#import "PYNetFetchServiceProtocol.h"
+#import "PYNetFetchService.h"
+
+#define USERDEFAULT_APP_STATUS_SETTING @"UserDefaultAPPStatusSetting"
+
+#define NETFETCH_CLASS_NAME @"channel_switch"
+#define NETFETCH_ID @"587383a38d6d81006c3b531b"
 
 @interface PYSettingService()
 
 @property (assign,nonatomic,readwrite) PYAPPStatusEnum status;
+@property (strong,nonatomic) id<PYNetFetchServiceProtocol> netFetchService;
 
 @end
 
-#define USERDEFAULT_APP_STATUS_SETTING @"UserDefaultAPPStatusSetting"
+
 
 @implementation PYSettingService
 
@@ -27,11 +34,10 @@
     dispatch_once(&onceToken, ^{
         instance = [[PYSettingService alloc] init];
         
-        [AVOSCloud setApplicationId:@"XpuV4q5fN2hj9hGr4CwzYvHO-gzGzoHsz" clientKey:@"vOcE9YRm4PLFdxv3GYrnkTVb"];
-        AVQuery *query = [AVQuery queryWithClassName:@"channel_switch"];
+        instance.netFetchService = [[PYNetFetchService alloc] init];
         
+        AVObject *object = [instance.netFetchService getObjectWithClassName:NETFETCH_CLASS_NAME WithId:NETFETCH_ID];
         
-        AVObject *object = [query getObjectWithId:@"587383a38d6d81006c3b531b"];
         if ([object[@"is_open"] boolValue]) {
             [[NSUserDefaults standardUserDefaults] setObject:@([object[@"is_open"] integerValue]) forKey:USERDEFAULT_APP_STATUS_SETTING];
         }

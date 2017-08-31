@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PYViewProtocol.h"
 
-@interface PYLoanIndexView : UIView
+@interface PYLoanIndexView : UIView<PYViewProtocol>
 
 @end

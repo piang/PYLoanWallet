@@ -8,6 +8,8 @@
 
 #import "PYLoanIndexView.h"
 
+
+
 @implementation PYLoanIndexView
 
 /*
@@ -22,8 +24,18 @@
     self = [super init];
     if (self) {
         self.backgroundColor = [UIColor redColor];
+        UIButton *testButton = [UIButton buttonWithType:UIButtonTypeSystem];
+        testButton.frame = CGRectMake(0, 0, 100, 100);
+        testButton.backgroundColor = [UIColor orangeColor];
+        [self addSubview:testButton];
+        
+        [testButton addTarget:self action:@selector(goTo:) forControlEvents:UIControlEventTouchUpInside];
     }
     return self;
+}
+
+- (void)bindViewModel:(id<PYViewModelProtocol>)viewModel {
+    
 }
 
 @end

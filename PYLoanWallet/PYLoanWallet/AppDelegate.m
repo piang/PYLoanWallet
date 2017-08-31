@@ -27,7 +27,6 @@
     self.window.backgroundColor = [UIColor whiteColor];
     [self loadRootViewController];
     [self.window makeKeyAndVisible];
-    [PYSettingService shared];
     NSLog(@"piang ==> %ld",[PYSettingService shared].status);
     
     return YES;
