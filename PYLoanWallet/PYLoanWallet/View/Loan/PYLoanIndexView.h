@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "PYViewProtocol.h"
 
-@interface PYLoanIndexView : UIView<PYViewProtocol>
+@interface PYLoanIndexView : UIView
+
+@property (weak,nonatomic) UIButton *testButton;
 
 @end

@@ -9,7 +9,6 @@
 #import "PYLoanIndexView.h"
 
 
-
 @implementation PYLoanIndexView
 
 /*
@@ -23,19 +22,19 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        self.backgroundColor = [UIColor redColor];
-        UIButton *testButton = [UIButton buttonWithType:UIButtonTypeSystem];
-        testButton.frame = CGRectMake(0, 0, 100, 100);
-        testButton.backgroundColor = [UIColor orangeColor];
-        [self addSubview:testButton];
         
-        [testButton addTarget:self action:@selector(goTo:) forControlEvents:UIControlEventTouchUpInside];
+        UIButton *testButton = [UIButton buttonWithType:UIButtonTypeSystem];
+        [self addSubview:testButton];
+        [testButton mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(100);
+            make.left.mas_equalTo(100);
+            make.width.mas_equalTo(100);
+            make.height.mas_equalTo(100);
+        }];
+        testButton.backgroundColor = [UIColor orangeColor];
+        _testButton = testButton;
     }
     return self;
-}
-
-- (void)bindViewModel:(id<PYViewModelProtocol>)viewModel {
-    
 }
 
 @end

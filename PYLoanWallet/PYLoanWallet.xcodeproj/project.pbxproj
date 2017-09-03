@@ -19,11 +19,11 @@
 		E8B8CF831F55C021002103F7 /* PYHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B8CF821F55C021002103F7 /* PYHomeViewController.m */; };
 		E8B8CF871F55C23B002103F7 /* PYLoanIndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B8CF861F55C23B002103F7 /* PYLoanIndexViewController.m */; };
 		E8B8CF8E1F55C551002103F7 /* PYLoanIndexView.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B8CF8D1F55C551002103F7 /* PYLoanIndexView.m */; };
+		E8C744E71F5BBE91005E18F4 /* PYBindCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8C744E61F5BBE91005E18F4 /* PYBindCardViewController.m */; };
+		E8C744EA1F5BD5C4005E18F4 /* PYBindCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = E8C744E91F5BD5C4005E18F4 /* PYBindCardView.m */; };
 		E8C7F4F61F547191000982E7 /* PYServicesImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = E8C7F4F51F547191000982E7 /* PYServicesImpl.m */; };
 		E8C7F4FA1F5472E9000982E7 /* PYSettingService.m in Sources */ = {isa = PBXBuildFile; fileRef = E8C7F4F91F5472E9000982E7 /* PYSettingService.m */; };
 		E8D6C9221F56FBAE00E245BE /* PYNetFetchService.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D6C9211F56FBAE00E245BE /* PYNetFetchService.m */; };
-		E8D6C9281F57154B00E245BE /* PYViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D6C9271F57154B00E245BE /* PYViewModel.m */; };
-		E8D6C92E1F57184100E245BE /* PYLoanViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = E8D6C92D1F57184100E245BE /* PYLoanViewModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +42,19 @@
 			remoteInfo = PYLoanWallet;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E8C7453C1F5C33BD005E18F4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A2D05790A3263684510D5064 /* Pods-PYLoanWallet.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PYLoanWallet.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PYLoanWallet/Pods-PYLoanWallet.debug.xcconfig"; sourceTree = "<group>"; };
@@ -70,6 +83,11 @@
 		E8B8CF861F55C23B002103F7 /* PYLoanIndexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYLoanIndexViewController.m; path = ../../View/Loan/PYLoanIndexViewController.m; sourceTree = "<group>"; };
 		E8B8CF8C1F55C551002103F7 /* PYLoanIndexView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYLoanIndexView.h; sourceTree = "<group>"; };
 		E8B8CF8D1F55C551002103F7 /* PYLoanIndexView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYLoanIndexView.m; sourceTree = "<group>"; };
+		E8C744E41F5A8A67005E18F4 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		E8C744E51F5BBE91005E18F4 /* PYBindCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYBindCardViewController.h; sourceTree = "<group>"; };
+		E8C744E61F5BBE91005E18F4 /* PYBindCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYBindCardViewController.m; sourceTree = "<group>"; };
+		E8C744E81F5BD5C4005E18F4 /* PYBindCardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYBindCardView.h; sourceTree = "<group>"; };
+		E8C744E91F5BD5C4005E18F4 /* PYBindCardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYBindCardView.m; sourceTree = "<group>"; };
 		E8C7F4F31F547102000982E7 /* PYServicesProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYServicesProtocol.h; sourceTree = "<group>"; };
 		E8C7F4F41F547191000982E7 /* PYServicesImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYServicesImpl.h; sourceTree = "<group>"; };
 		E8C7F4F51F547191000982E7 /* PYServicesImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYServicesImpl.m; sourceTree = "<group>"; };
@@ -79,13 +97,6 @@
 		E8D6C9201F56FBAE00E245BE /* PYNetFetchService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYNetFetchService.h; sourceTree = "<group>"; };
 		E8D6C9211F56FBAE00E245BE /* PYNetFetchService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYNetFetchService.m; sourceTree = "<group>"; };
 		E8D6C9231F56FBD100E245BE /* PYNetFetchServiceProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYNetFetchServiceProtocol.h; sourceTree = "<group>"; };
-		E8D6C9261F57154B00E245BE /* PYViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYViewModel.h; sourceTree = "<group>"; };
-		E8D6C9271F57154B00E245BE /* PYViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYViewModel.m; sourceTree = "<group>"; };
-		E8D6C9291F57156500E245BE /* PYViewModelProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYViewModelProtocol.h; sourceTree = "<group>"; };
-		E8D6C92A1F57171500E245BE /* PYViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYViewProtocol.h; sourceTree = "<group>"; };
-		E8D6C92C1F57184100E245BE /* PYLoanViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYLoanViewModel.h; sourceTree = "<group>"; };
-		E8D6C92D1F57184100E245BE /* PYLoanViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYLoanViewModel.m; sourceTree = "<group>"; };
-		E8D6C92F1F57186700E245BE /* PYLoanViewModelProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYLoanViewModelProtocol.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,7 +167,7 @@
 		E81BB02D1F53041000A7B57A /* PYLoanWallet */ = {
 			isa = PBXGroup;
 			children = (
-				E8D6C9241F57150900E245BE /* ViewModel */,
+				E8C744EB1F5C3175005E18F4 /* Resource */,
 				E8B8CF881F55C4CE002103F7 /* Controller */,
 				E8C7F4F11F546FF4000982E7 /* Service */,
 				E81BB0641F5306F300A7B57A /* View */,
@@ -176,6 +187,7 @@
 			isa = PBXGroup;
 			children = (
 				E81BB02F1F53041000A7B57A /* main.m */,
+				E8C744E41F5A8A67005E18F4 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -211,6 +223,8 @@
 			children = (
 				E8B8CF8C1F55C551002103F7 /* PYLoanIndexView.h */,
 				E8B8CF8D1F55C551002103F7 /* PYLoanIndexView.m */,
+				E8C744E81F5BD5C4005E18F4 /* PYBindCardView.h */,
+				E8C744E91F5BD5C4005E18F4 /* PYBindCardView.m */,
 			);
 			path = Loan;
 			sourceTree = "<group>";
@@ -230,7 +244,6 @@
 			children = (
 				E81BB0691F53101E00A7B57A /* PYViewController.h */,
 				E81BB06A1F53101E00A7B57A /* PYViewController.m */,
-				E8D6C92A1F57171500E245BE /* PYViewProtocol.h */,
 			);
 			path = ControllerBase;
 			sourceTree = "<group>";
@@ -249,8 +262,17 @@
 			children = (
 				E8B8CF851F55C23B002103F7 /* PYLoanIndexViewController.h */,
 				E8B8CF861F55C23B002103F7 /* PYLoanIndexViewController.m */,
+				E8C744E51F5BBE91005E18F4 /* PYBindCardViewController.h */,
+				E8C744E61F5BBE91005E18F4 /* PYBindCardViewController.m */,
 			);
 			path = Loan;
+			sourceTree = "<group>";
+		};
+		E8C744EB1F5C3175005E18F4 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		E8C7F4F11F546FF4000982E7 /* Service */ = {
@@ -285,35 +307,6 @@
 			path = NetFetch;
 			sourceTree = "<group>";
 		};
-		E8D6C9241F57150900E245BE /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				E8D6C92B1F5717F400E245BE /* Loan */,
-				E8D6C9251F57153300E245BE /* ViewModelBase */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		E8D6C9251F57153300E245BE /* ViewModelBase */ = {
-			isa = PBXGroup;
-			children = (
-				E8D6C9261F57154B00E245BE /* PYViewModel.h */,
-				E8D6C9271F57154B00E245BE /* PYViewModel.m */,
-				E8D6C9291F57156500E245BE /* PYViewModelProtocol.h */,
-			);
-			path = ViewModelBase;
-			sourceTree = "<group>";
-		};
-		E8D6C92B1F5717F400E245BE /* Loan */ = {
-			isa = PBXGroup;
-			children = (
-				E8D6C92C1F57184100E245BE /* PYLoanViewModel.h */,
-				E8D6C92D1F57184100E245BE /* PYLoanViewModel.m */,
-				E8D6C92F1F57186700E245BE /* PYLoanViewModelProtocol.h */,
-			);
-			path = Loan;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -327,6 +320,7 @@
 				E81BB0291F53041000A7B57A /* Resources */,
 				94F94DC4B4AC490C1F56F8A5 /* [CP] Embed Pods Frameworks */,
 				C4A9F0DD855D75EBFCBDF577 /* [CP] Copy Pods Resources */,
+				E8C7453C1F5C33BD005E18F4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -502,10 +496,10 @@
 				E81BB06B1F53101E00A7B57A /* PYViewController.m in Sources */,
 				E8C7F4FA1F5472E9000982E7 /* PYSettingService.m in Sources */,
 				E81BB06E1F5311E400A7B57A /* AppDelegate+Launch.m in Sources */,
+				E8C744E71F5BBE91005E18F4 /* PYBindCardViewController.m in Sources */,
+				E8C744EA1F5BD5C4005E18F4 /* PYBindCardView.m in Sources */,
 				E8B8CF831F55C021002103F7 /* PYHomeViewController.m in Sources */,
 				E8B8CF8E1F55C551002103F7 /* PYLoanIndexView.m in Sources */,
-				E8D6C92E1F57184100E245BE /* PYLoanViewModel.m in Sources */,
-				E8D6C9281F57154B00E245BE /* PYViewModel.m in Sources */,
 				E81BB0331F53041000A7B57A /* AppDelegate.m in Sources */,
 				E81BB0301F53041000A7B57A /* main.m in Sources */,
 				E8C7F4F61F547191000982E7 /* PYServicesImpl.m in Sources */,
@@ -651,6 +645,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A2D05790A3263684510D5064 /* Pods-PYLoanWallet.debug.xcconfig */;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PYLoanWallet/PrefixHeader.pch;
 				INFOPLIST_FILE = PYLoanWallet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.piang.PYLoanWallet;
@@ -662,6 +659,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BFC07280ACAACB11691DD972 /* Pods-PYLoanWallet.release.xcconfig */;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = PYLoanWallet/PrefixHeader.pch;
 				INFOPLIST_FILE = PYLoanWallet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.piang.PYLoanWallet;

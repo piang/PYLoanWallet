@@ -1,28 +1,37 @@
 //
-//  PYViewController.m
+//  PYBindCardViewController.m
 //  PYLoanWallet
 //
-//  Created by 洋 裴 on 2017/8/27.
+//  Created by 洋 裴 on 2017/9/3.
 //  Copyright © 2017年 piang. All rights reserved.
 //
 
-#import "PYViewController.h"
+#import "PYBindCardViewController.h"
+#import "PYBindCardView.h"
 
-@interface PYViewController ()
+@interface PYBindCardViewController ()
 
 @end
 
-@implementation PYViewController
+@implementation PYBindCardViewController
+
+- (void)loadView {
+    PYBindCardView *bindCardView = [[PYBindCardView alloc] init];
+    self.view = bindCardView;
+    [bindCardView.bindCardButton addTarget:self action:@selector(bindCardAction:) forControlEvents:UIControlEventTouchUpInside];
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.edgesForExtendedLayout = UIRectEdgeNone;
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)bindCardAction:(UIButton *)sender {
 }
 
 /*

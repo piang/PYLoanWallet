@@ -8,6 +8,7 @@
 
 #import "PYLoanIndexViewController.h"
 #import "PYLoanIndexView.h"
+#import "PYBindCardViewController.h"
 
 @interface PYLoanIndexViewController ()
 
@@ -16,14 +17,21 @@
 @implementation PYLoanIndexViewController
 
 - (void)loadView {
-    self.view = [[PYLoanIndexView alloc] init];
+    PYLoanIndexView *view = [[PYLoanIndexView alloc] init];
+    [view.testButton addTarget:self action:@selector(goTo:) forControlEvents:UIControlEventTouchUpInside];
+    self.view = view;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.title = @"贷款";
-    self.edgesForExtendedLayout = UIRectEdgeNone;
+}
+
+- (void)goTo:(UIButton *)sender {
+    PYBindCardViewController *testVC = [[PYBindCardViewController alloc] init];
+    testVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:testVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
