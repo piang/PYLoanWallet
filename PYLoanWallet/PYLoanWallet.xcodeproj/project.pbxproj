@@ -19,6 +19,9 @@
 		E8B8CF831F55C021002103F7 /* PYHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B8CF821F55C021002103F7 /* PYHomeViewController.m */; };
 		E8B8CF871F55C23B002103F7 /* PYLoanIndexViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B8CF861F55C23B002103F7 /* PYLoanIndexViewController.m */; };
 		E8B8CF8E1F55C551002103F7 /* PYLoanIndexView.m in Sources */ = {isa = PBXBuildFile; fileRef = E8B8CF8D1F55C551002103F7 /* PYLoanIndexView.m */; };
+		E8BD63B41F5DB173005E6369 /* AipBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8BD63B31F5DB173005E6369 /* AipBase.framework */; };
+		E8BD63B51F5DB26A005E6369 /* AipBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E8BD63B31F5DB173005E6369 /* AipBase.framework */; };
+		E8BD63B61F5DB26A005E6369 /* AipBase.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E8BD63B31F5DB173005E6369 /* AipBase.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		E8C744E71F5BBE91005E18F4 /* PYBindCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E8C744E61F5BBE91005E18F4 /* PYBindCardViewController.m */; };
 		E8C744EA1F5BD5C4005E18F4 /* PYBindCardView.m in Sources */ = {isa = PBXBuildFile; fileRef = E8C744E91F5BD5C4005E18F4 /* PYBindCardView.m */; };
 		E8C7F4F61F547191000982E7 /* PYServicesImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = E8C7F4F51F547191000982E7 /* PYServicesImpl.m */; };
@@ -50,6 +53,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				E8BD63B61F5DB26A005E6369 /* AipBase.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -83,6 +87,7 @@
 		E8B8CF861F55C23B002103F7 /* PYLoanIndexViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYLoanIndexViewController.m; path = ../../View/Loan/PYLoanIndexViewController.m; sourceTree = "<group>"; };
 		E8B8CF8C1F55C551002103F7 /* PYLoanIndexView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYLoanIndexView.h; sourceTree = "<group>"; };
 		E8B8CF8D1F55C551002103F7 /* PYLoanIndexView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYLoanIndexView.m; sourceTree = "<group>"; };
+		E8BD63B31F5DB173005E6369 /* AipBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AipBase.framework; sourceTree = "<group>"; };
 		E8C744E41F5A8A67005E18F4 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		E8C744E51F5BBE91005E18F4 /* PYBindCardViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYBindCardViewController.h; sourceTree = "<group>"; };
 		E8C744E61F5BBE91005E18F4 /* PYBindCardViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYBindCardViewController.m; sourceTree = "<group>"; };
@@ -104,6 +109,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E8BD63B51F5DB26A005E6369 /* AipBase.framework in Frameworks */,
+				E8BD63B41F5DB173005E6369 /* AipBase.framework in Frameworks */,
 				0B5841DC2C6FB02FE776C7FB /* libPods-PYLoanWallet.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,9 +275,18 @@
 			path = Loan;
 			sourceTree = "<group>";
 		};
+		E8BD63B21F5DB121005E6369 /* AipOcrSdk */ = {
+			isa = PBXGroup;
+			children = (
+				E8BD63B31F5DB173005E6369 /* AipBase.framework */,
+			);
+			path = AipOcrSdk;
+			sourceTree = "<group>";
+		};
 		E8C744EB1F5C3175005E18F4 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				E8BD63B21F5DB121005E6369 /* AipOcrSdk */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -645,7 +661,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A2D05790A3263684510D5064 /* Pods-PYLoanWallet.debug.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PYLoanWallet/Resource/AipOcrSdk",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = PYLoanWallet/PrefixHeader.pch;
 				INFOPLIST_FILE = PYLoanWallet/Info.plist;
@@ -659,7 +678,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BFC07280ACAACB11691DD972 /* Pods-PYLoanWallet.release.xcconfig */;
 			buildSettings = {
-				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PYLoanWallet/Resource/AipOcrSdk",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = PYLoanWallet/PrefixHeader.pch;
 				INFOPLIST_FILE = PYLoanWallet/Info.plist;

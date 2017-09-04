@@ -8,8 +8,9 @@
 
 #import "PYBindCardViewController.h"
 #import "PYBindCardView.h"
+#import <AipOcrSdk/AipOcrSdk.h>
 
-@interface PYBindCardViewController ()
+@interface PYBindCardViewController ()<AipOcrDelegate>
 
 @end
 
@@ -32,6 +33,8 @@
 }
 
 - (void)bindCardAction:(UIButton *)sender {
+    UIViewController * vc = [AipCaptureCardVC ViewControllerWithCardType:CardTypeBankCard andDelegate:self];
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 /*
